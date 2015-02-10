@@ -2,7 +2,7 @@
 
 #### Take CPU profiles of your Meteor app and analyze them.
 
-First install this package into your Meteor app.
+First, install this package into your Meteor app.
 
 ~~~shell
 meteor add meteorhacks:kadira-profiler
