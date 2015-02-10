@@ -6,6 +6,6 @@
   "version": "1.0.0",
   "git": "https://github.com/meteorhacks/kadira-profiler.git",
   "packages": {
-    "kadira": "2.8.0"
+    "kadira": "2.18.0"
   }
 }
