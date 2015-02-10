@@ -1,0 +1,11 @@
+{
+  "name": "kadira",
+  "description": "CPU Profiler for Kadira",
+  "homepage": "https://kadira.io/cpu-profiling.html",
+  "author": "MeteorHacks <hello@meteorhacks.com>",
+  "version": "1.0.0",
+  "git": "https://github.com/meteorhacks/kadira-profiler.git",
+  "packages": {
+    "kadira": "2.8.0"
+  }
+}
