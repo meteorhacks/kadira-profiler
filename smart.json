@@ -1,5 +1,5 @@
 {
-  "name": "kadira",
+  "name": "kadira-profiler",
   "description": "CPU Profiler for Kadira",
   "homepage": "https://kadira.io/cpu-profiling.html",
   "author": "MeteorHacks <hello@meteorhacks.com>",
