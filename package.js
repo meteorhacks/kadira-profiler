@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "CPU Profiler for Kadira",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "git": "https://github.com/meteorhacks/kadira-profiler.git",
   "name": "meteorhacks:kadira-profiler"
 });
@@ -35,7 +35,7 @@ function configurePackage(api) {
     api.versionsFrom('METEOR@0.9.1');
     api.use('meteorhacks:kadira@2.18.0');
     // binary dependencies
-    api.use('meteorhacks:kadira-binary-deps@1.3.1');
+    api.use('meteorhacks:kadira-binary-deps@1.4.0');
   } else {
     // for Meteor versions < 0.9.x
     api.use('kadira');
