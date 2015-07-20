@@ -1,27 +1,15 @@
 Package.describe({
-  "summary": "CPU Profiler for Kadira",
-  "version": "1.1.0",
+  "summary": "CPU Profiler for Meteor (used with Kadira)",
+  "version": "1.2.0",
   "git": "https://github.com/meteorhacks/kadira-profiler.git",
   "name": "meteorhacks:kadira-profiler"
 });
 
-var npmModules = {};
-
-if(!Package.onUse) {
-  // this is not Meteor 0.9
-  // we need to add usage @0.4.9 which contains platform specific builds
-  // for 0.9+ we are using meteorhacks:kadira-binary-deps
-  // which has platform specific builds
-  npmModules["v8-profiler"] = "5.2.0";
-}
-
-Npm.depends(npmModules);
-
-Package.on_use(function(api) {
+Package.onUse(function(api) {
   configurePackage(api);
 });
 
-Package.on_test(function(api) {
+Package.onTest(function(api) {
   configurePackage(api);
   api.use([
     'tinytest',
@@ -30,18 +18,12 @@ Package.on_test(function(api) {
 });
 
 function configurePackage(api) {
-  if(api.versionsFrom) {
-    // for Meteor version >= 0.9.x
-    api.versionsFrom('METEOR@0.9.1');
-    api.use('meteorhacks:kadira@2.18.0');
-    // binary dependencies
-    api.use('meteorhacks:kadira-binary-deps@1.4.0');
-  } else {
-    // for Meteor versions < 0.9.x
-    api.use('kadira');
-  }
-
+  api.versionsFrom('METEOR@1.0');
   api.use('http');
+  api.use('meteorhacks:kadira@2.22.0');
+  api.imply('meteorhacks:kadira@2.22.0');
+  api.use('meteorhacks:kadira-binary-deps@1.4.0');
+
   api.add_files('lib/server.js', 'server');
   api.add_files('lib/client.js', 'client');
 }
