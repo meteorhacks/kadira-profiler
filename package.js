@@ -20,6 +20,8 @@ Package.onTest(function(api) {
 function configurePackage(api) {
   api.versionsFrom('METEOR@1.0');
   api.use('http');
+  api.use('check');
+  api.use('random');
   api.use('meteorhacks:kadira@2.22.0');
   api.imply('meteorhacks:kadira@2.22.0');
   api.use('meteorhacks:kadira-binary-deps@1.4.0');
