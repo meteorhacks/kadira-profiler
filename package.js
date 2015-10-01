@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "CPU Profiler for Meteor (used with Kadira)",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "git": "https://github.com/meteorhacks/kadira-profiler.git",
   "name": "meteorhacks:kadira-profiler"
 });
